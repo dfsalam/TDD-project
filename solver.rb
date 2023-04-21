@@ -1,8 +1,6 @@
 class Solver
   def factorial(int)
-    if int < 0
-      return raise StandardError, "The number should be positive or zero."
-    end
+    return raise StandardError, 'The number should be positive or zero.' if int.negative?
     return 1 if [0, 1].include?(int)
 
     int * factorial(int - 1)

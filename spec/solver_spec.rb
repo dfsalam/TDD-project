@@ -7,7 +7,7 @@ describe Solver do
       expect(subject.factorial(5)).to eql(120)
     end
     it 'returns factorial of a negative number' do
-      expect{ subject.factorial(-5) }.to raise_error(StandardError)
+      expect { subject.factorial(-5) }.to raise_error(StandardError)
     end
     it 'returns factorial of zero' do
       expect(subject.factorial(0)).to eql(1)
