@@ -1,26 +1,24 @@
 class Solver
-  def factorial(n)
-    if n == 0 || n == 1
-      return 1
-    else
-      return n * factorial(n - 1)
-    end
+  def factorial(int)
+    return 1 if [0, 1].include?(int)
+
+
+    int * factorial(int - 1)
   end
 
   def reverse(string)
-    output = string.reverse
-    output
+    string.reverse
   end
 
-  def fizzbuzz(n)
-    if n % 3 == 0 && n % 5 == 0
-      return 'fizzbuzz'
-    elsif n % 3 == 0
-      return 'fizz'
-    elsif n % 5 == 0
-      return 'buzz'
+  def fizzbuzz(int)
+    if (int % 3).zero? && (int % 5).zero?
+      'fizzbuzz'
+    elsif (int % 3).zero?
+      'fizz'
+    elsif (int % 5).zero?
+      'buzz'
     else
-      return n
+      int
     end
   end
 end
