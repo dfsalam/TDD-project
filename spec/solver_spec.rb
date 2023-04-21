@@ -3,8 +3,14 @@ require './solver'
 
 describe Solver do
   describe '#factorial' do
-    it 'returns factorial of a given number' do
+    it 'returns factorial of a positive number' do
       expect(subject.factorial(5)).to eql(120)
+    end
+    it 'returns factorial of a negative number' do
+      expect(subject.factorial(-5)).to raise_error(StandardError, "The number should be positive or zero.")
+    end
+    it 'returns factorial of zero' do
+      expect(subject.factorial(0)).to eql(1)
     end
   end
 
