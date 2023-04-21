@@ -2,7 +2,6 @@ class Solver
   def factorial(int)
     return 1 if [0, 1].include?(int)
 
-
     int * factorial(int - 1)
   end
 
