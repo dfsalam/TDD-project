@@ -6,4 +6,9 @@ class Solver
       return n * factorial(n - 1)
     end
   end
+
+  def reverse(string)
+    output = string.reverse
+    output
+  end
 end
